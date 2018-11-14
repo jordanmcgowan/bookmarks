@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Bookmarks</string>
+
+    <!--Main Activity -->
+    <string name="add_bookmark">Add Bookmark</string>
+
+
+    <!--Bookmark List-->
+    <string name="book_by_author">By %s</string>
+    <string name="book_progress_percentage">%d / %d</string>
+
+
+    <!--Add Bookmark-->
+    <string name="added_bookmark_to_list">Successfully added \'%s\' to your list</string>
+    <string name="pages_read">Pages read of %d</string>
+
+</resources>

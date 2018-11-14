@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingBottom="@dimen/padding_4x">
+
+  <ImageView
+    android:id="@+id/thumbnailIV"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:visibility="visible"
+    tools:src="@drawable/ic_bookmark"/>
+
+  <TextView
+    android:id="@+id/bookmarkTitleTV"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:paddingTop="20dp"
+    android:textStyle="italic"
+    android:maxLines="2"
+    android:ellipsize="end"
+    app:layout_constraintStart_toEndOf="@+id/thumbnailIV"
+    app:layout_constrainedWidth="true"
+    tools:text="This is a very long book title for a book about things and people" />
+
+  <TextView
+    android:id="@+id/bookmarkAuthorTV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14sp"
+    android:paddingLeft="@dimen/padding_4x"
+    android:paddingTop="@dimen/padding_2x"
+    app:layout_constraintTop_toBottomOf="@id/thumbnailIV"
+    tools:text="Author"/>
+
+  <TextView
+    android:id="@+id/bookmarkPublisherTV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14sp"
+    android:paddingRight="@dimen/padding_4x"
+    android:paddingTop="@dimen/padding_2x"
+    app:layout_constraintTop_toBottomOf="@id/thumbnailIV"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:text="(Publisher)"
+    android:visibility="gone"/>
+
+  <TextView
+    android:id="@+id/bookmarkRatingTV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableEnd="@drawable/ic_star"
+    android:text="3.4"
+    android:textSize="14sp"
+    android:paddingRight="@dimen/padding_4x"
+    android:paddingTop="@dimen/padding_2x"
+    android:gravity="center_vertical"
+    app:layout_constraintTop_toBottomOf="@id/thumbnailIV"
+    app:layout_constraintEnd_toStartOf="@id/bookmarkPublisherTV"/>
+
+  <TextView
+    android:id="@+id/bookmarkISBNTV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14sp"
+    android:paddingLeft="@dimen/padding_4x"
+    android:paddingTop="@dimen/padding_2x"
+    app:layout_constraintTop_toBottomOf="@id/bookmarkAuthorTV"
+    tools:text="1234567890"/>
+
+  <ProgressBar
+    android:id="@+id/progressBar"
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:layout_marginStart="@dimen/padding_4x"
+    android:layout_marginEnd="@dimen/padding_20x"
+    android:progressDrawable="@drawable/progress_primary"
+    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+    app:layout_constraintTop_toBottomOf="@id/bookmarkISBNTV"
+    tools:progress="34"/>
+
+  <TextView
+    android:id="@+id/pageCountTV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/padding_2x"
+    app:layout_constraintTop_toBottomOf="@id/bookmarkISBNTV"
+    app:layout_constraintStart_toEndOf="@id/progressBar"
+    tools:text="123/234" />
+
+</android.support.constraint.ConstraintLayout>
