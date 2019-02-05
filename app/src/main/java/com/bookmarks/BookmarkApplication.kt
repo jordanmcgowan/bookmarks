@@ -6,6 +6,7 @@ import com.bookmarks.data.BookmarkListViewModel
 import com.bookmarks.storage.AppDatabase
 import com.bookmarks.storage.BookmarkRepository
 import com.facebook.stetho.Stetho
+import com.google.firebase.FirebaseApp
 import timber.log.Timber
 
 class BookmarkApplication: Application() {
@@ -34,5 +35,6 @@ class BookmarkApplication: Application() {
 
     userRepository = BookmarkRepository(appDatabase.bookmarkDao())
     bookmarkListViewModel = BookmarkListViewModel(userRepository)
+    FirebaseApp.initializeApp(this)
   }
 }

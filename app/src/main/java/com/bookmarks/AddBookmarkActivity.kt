@@ -1,22 +1,21 @@
 package com.bookmarks
 
-import android.net.Uri
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.text.Editable
-import android.text.Spannable
-import android.text.TextWatcher
 import android.widget.Toast
 import com.bookmarks.networking.OpenLibraryApiService
 import com.bookmarks.networking.toBookmark
-import kotlinx.android.synthetic.main.activity_add_bookmark.*
-import com.bookmarks.storage.AppDatabase
 import com.bookmarks.storage.Bookmark
-import com.bookmarks.storage.BookmarkDao
-import com.bookmarks.storage.BookmarkRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.activity_add_bookmark.authorET
+import kotlinx.android.synthetic.main.activity_add_bookmark.isbnET
+import kotlinx.android.synthetic.main.activity_add_bookmark.pagesReadET
+import kotlinx.android.synthetic.main.activity_add_bookmark.saveBookmarkButton
+import kotlinx.android.synthetic.main.activity_add_bookmark.searchForBookButton
+import kotlinx.android.synthetic.main.activity_add_bookmark.titleET
 import timber.log.Timber
 
 class AddBookmarkActivity : AppCompatActivity() {
@@ -65,6 +64,9 @@ class AddBookmarkActivity : AppCompatActivity() {
       val pagesRead = if (pagesReadET.text.toString().isNotBlank()) pagesReadET.text.toString().toInt() else 0
       val officialBookToAdd = bookToAdd!!.copy(pagesRead = pagesRead)
       bookmarkListViewModel.addBookmark(officialBookToAdd)
+      Toast.makeText(this, "${officialBookToAdd.title} has been added", Toast.LENGTH_SHORT).show()
+      val intent = Intent(this, HomeActivity::class.java)
+      startActivity(intent)
     } else {
       Toast.makeText(this, "This book cannot be added at this time", Toast.LENGTH_SHORT).show()
     }
