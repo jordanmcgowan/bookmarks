@@ -30,7 +30,7 @@ fun OpenLibraryResponse.VolumeInfo.toBookmark(pagesRead: Int): Bookmark {
     numPages = this.pageCount,
     rating = this.averageRating,
     imageUrl = this.imageLinks["thumbnail"]!!,
-    isbn = this.industryIdentifiers[0].identifier.toLong(),
+    isbn = this.industryIdentifiers[0].identifier.replace(Regex("[^0-9]"), "").toLong(),
     pagesRead = pagesRead
   )
 }

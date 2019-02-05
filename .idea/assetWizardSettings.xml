@@ -87,8 +87,9 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="d6bf55" />
-                            <entry key="outputName" value="ic_star" />
+                            <entry key="outputName" value="ic_barcode_scan" />
                             <entry key="sourceFile" value="$USER_HOME$/Downloads/barcode-scan.svg" />
                           </map>
                         </option>

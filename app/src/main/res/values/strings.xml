@@ -3,11 +3,13 @@
 
     <!--Main Activity -->
     <string name="add_bookmark">Add Bookmark</string>
+    <string name="add_bookmark_hint">Add a book to get started</string>
 
 
     <!--Bookmark List-->
     <string name="book_by_author">By %s</string>
     <string name="book_progress_percentage">%d / %d</string>
+    <string name="book_progress_done">Done!</string>
 
 
     <!--Add Bookmark-->

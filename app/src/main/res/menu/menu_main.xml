@@ -8,10 +8,16 @@
     app:showAsAction="always"/>
 
   <item
+    android:id="@+id/scanCodeAction"
+    android:icon="@drawable/ic_barcode_scan"
+    android:title="scan book barcode"
+    app:showAsAction="always"/>
+
+  <item
     android:id="@+id/deleteAllAction"
     android:icon="@drawable/ic_delete_all"
     android:title="delete all bookmarks"
-    app:showAsAction="ifRoom"/>
+    app:showAsAction="never"/>
 
   <!-- Settings, should always be in the overflow -->
   <item android:id="@+id/action_settings"

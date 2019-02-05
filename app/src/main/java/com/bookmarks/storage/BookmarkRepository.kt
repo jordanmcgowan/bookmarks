@@ -25,11 +25,29 @@ class BookmarkRepository(val bookmarkDao: BookmarkDao) {
   }
 
   fun deleteAllBookmarks() {
-    Observable.fromCallable { bookmarkDao.deleteAllBookmarks()}
+    Observable.fromCallable { bookmarkDao.deleteAllBookmarks() }
       .subscribeOn(Schedulers.io())
       .observeOn(Schedulers.io())
       .subscribe {
         Timber.d("Deleted all bookmarks in DB...")
+      }
+  }
+
+  fun updateBookmark(bookmark: Bookmark) {
+    Observable.fromCallable {bookmarkDao.updateBookmark(bookmark) }
+      .subscribeOn(Schedulers.io())
+      .observeOn(Schedulers.io())
+      .subscribe {
+        Timber.d("Updating ${bookmark.title}...")
+      }
+  }
+
+  fun deleteBookmark(bookmark: Bookmark) {
+    Observable.fromCallable {bookmarkDao.deleteBookmark(bookmark) }
+      .subscribeOn(Schedulers.io())
+      .observeOn(Schedulers.io())
+      .subscribe {
+        Timber.d("Deleting ${bookmark.title}...")
       }
   }
 
