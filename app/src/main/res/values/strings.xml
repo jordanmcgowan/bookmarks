@@ -4,7 +4,9 @@
     <!--Main Activity -->
     <string name="add_bookmark">Add Bookmark</string>
     <string name="add_bookmark_hint">Add a book to get started</string>
-
+    <string name="add_bookmark_barcode">Add Bookmark via Barcode</string>
+    <string name="delete_all">Delete all</string>
+    <string name="settings">Settings</string>
 
     <!--Bookmark List-->
     <string name="book_by_author">By %s</string>
@@ -14,6 +16,21 @@
 
     <!--Add Bookmark-->
     <string name="added_bookmark_to_list">Successfully added \'%s\' to your list</string>
+    <string name="autofill_by_isbn">Autofill by ISBN</string>
+    <string name="enter_an_isbn">enter an ISBN</string>
+    <string name="book_title">book title</string>
+    <string name="book_author">book author</string>
+    <string name="pages_read_entry">pages read</string>
+
+    <!--Edit Bookmark-->
+    <string name="update_bookmark">Update Bookmark</string>
+    <string name="delete_bookmark">Delete Bookmark</string>
+    <string name="isbn_prefix">ISBN: %d</string>
+    <string name="title_prefix">Title: %s</string>
+    <string name="author_prefix">Author: %s</string>
     <string name="pages_read">Pages read of %d</string>
+    <string name="rating_prefix">Rating: %f</string>
+
+
 
 </resources>

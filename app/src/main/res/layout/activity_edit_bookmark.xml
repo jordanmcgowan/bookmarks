@@ -40,19 +40,30 @@
     android:textSize="14sp"
     app:layout_constraintTop_toBottomOf="@id/editAuthorET" />
 
+  <EditText
+    android:id="@+id/editRatingET"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:inputType="text"
+    android:padding="@dimen/padding_6x"
+    android:textSize="14sp"
+    app:layout_constraintTop_toBottomOf="@id/editPagesReadET" />
+
   <Button
     android:id="@+id/editBookmarkButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Update bookmark"
+    android:text="@string/update_bookmark"
+    android:textColor="@color/white"
     android:backgroundTint="@color/colorPrimaryDark"
-    app:layout_constraintTop_toBottomOf="@id/editPagesReadET"/>
+    app:layout_constraintTop_toBottomOf="@id/editRatingET"/>
 
   <Button
     android:id="@+id/deleteBookmarkButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Delete bookmark"
+    android:text="@string/delete_bookmark"
+    android:textColor="@color/white"
     android:backgroundTint="@color/colorPrimaryDark"
     app:layout_constraintTop_toBottomOf="@id/editBookmarkButton"/>
 

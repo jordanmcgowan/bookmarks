@@ -4,23 +4,23 @@
   <item
     android:id="@+id/addBookmarkAction"
     android:icon="@drawable/ic_add"
-    android:title="add bookmark"
+    android:title="@string/add_bookmark"
     app:showAsAction="always"/>
 
   <item
     android:id="@+id/scanCodeAction"
     android:icon="@drawable/ic_barcode_scan"
-    android:title="scan book barcode"
+    android:title="@string/add_bookmark_barcode"
     app:showAsAction="always"/>
 
   <item
     android:id="@+id/deleteAllAction"
     android:icon="@drawable/ic_delete_all"
-    android:title="delete all bookmarks"
+    android:title="@string/delete_all"
     app:showAsAction="never"/>
 
   <!-- Settings, should always be in the overflow -->
   <item android:id="@+id/action_settings"
-    android:title="settings"
+    android:title="@string/settings"
     app:showAsAction="never"/>
 </menu>
